@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <title>易途8接口自动化测试报告</title>
+    <style>
+        #fileName {
+            display: none;
+        }
+
+        #link {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <p id="fileName">{{ fileName }}</p>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-7">
+            <table class="table table-condensed table-bordered table-hover table-striped">
+                <caption><h3>易途8接口自动化测试概览</h3></caption>
+                <thead>
+                    <tr>
+                        <td>总数</td>
+                        <td>通过</td>
+                        <td>失败</td>
+                        <td>跳过</td>
+                        <td>开始时间</td>
+                        <td>结束时间</td>
+                        <td>耗时</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ total }}</td>
+                        <td class="success">{{ successNum }}</td>
+                        <td class="danger">{{ failNum }}</td>
+                        <td>{{ ignored }}</td>
+                        <td>{{ start }}</td>
+                        <td>{{ end }}</td>
+                        <td>{{ cost }}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-7">
+            <a id='link' class='btn btn-primary ' href="#">点击查看详情</a>
+        </div>
+    </div>
+    <script>
+        window.onload = function openReport() {
+            var fileName = document.getElementById('fileName').innerHTML;
+            document.getElementById('link').setAttribute('href', "/report/"+fileName);
+        }
+    </script>
+
+</body>
+</html>
