@@ -13,6 +13,7 @@ result = {}
 
 class apiFunc(object):
 
+
     def writeReport(self, rt):
         # 写入结果到测试报告
         filename = handle.now().strftime("%Y-%m-%d %H-%M-%S") + ".html"

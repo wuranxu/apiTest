@@ -28,6 +28,13 @@
             display: none;
         }
 
+        .forgive_green td{
+            background-color: #dff0d8;
+        }
+
+        .fail_red td {
+            background-color: #f2dede;
+        }
 
     </style>
 </head>
@@ -55,56 +62,56 @@
 			  </thead>
 			  <tbody>
 			        {% for item in successful %}
-				    	<tr>
-                            <td bgcolor="#dff0d8">
+				    	<tr class="forgive_green">
+                            <td>
                                 <button onclick="show(this)">详情</button>
                                 <button class='hd' onclick="hide(this)">隐藏</button>
                             </td>
-				            <td bgcolor="#dff0d8">{{ item.caseInfo.name }}</td>
-                            <td bgcolor="#dff0d8">{{ item.caseInfo.url }}</td>
-                            <td bgcolor="#dff0d8">OK</td>
-                            <td bgcolor="#dff0d8">
+				            <td>{{ item.caseInfo.name }}</td>
+                            <td>{{ item.caseInfo.url }}</td>
+                            <td>OK</td>
+                            <td>
                                 <pre class="test1">{{ item.caseInfo.expected }}</pre>
                             </td>
-                            <td bgcolor="#dff0d8">
+                            <td>
                                 <pre class="test1">{{ item.caseInfo.actually }}</pre>
                             </td>
-                            <td bgcolor="#dff0d8">{{ item.caseInfo._assert }}</td>
-                            <td bgcolor="#dff0d8">{{ item.caseInfo.method }}</td>
-                            <td bgcolor="#dff0d8">{{ item.caseInfo.code }}</td>
-                            <td bgcolor="#dff0d8">{{ item.caseInfo.rt_code }}</td>
-                            <td bgcolor="#dff0d8">
+                            <td>{{ item.caseInfo._assert }}</td>
+                            <td>{{ item.caseInfo.method }}</td>
+                            <td>{{ item.caseInfo.code }}</td>
+                            <td>{{ item.caseInfo.rt_code }}</td>
+                            <td>
                                 <pre class="test1">{{ item.caseInfo.params }}</pre>
                             </td>
-				            <td bgcolor="#dff0d8">
+				            <td>
                                 <pre class="test1">{{ item.caseInfo.headers }}</pre>
                             </td>
 
 				        </tr>
 			        {% endfor %}
 		  	        {% for item in failed %}      
-				    	<tr>
-                            <td bgcolor="#f2dede">
+				    	<tr class="fail_red">
+                            <td>
                                 <button onclick="show(this)">详情</button>
                                 <button class='hd' onclick="hide(this)">隐藏</button>
                             </td>
-				            <td bgcolor="#f2dede">{{ item.caseInfo.name }}</td>
-                            <td bgcolor="#f2dede">{{ item.caseInfo.url }}</td>
-                            <td bgcolor="#f2dede">NO</td>
-                            <td bgcolor="#f2dede">
+				            <td>{{ item.caseInfo.name }}</td>
+                            <td>{{ item.caseInfo.url }}</td>
+                            <td >NO</td>
+                            <td>
                                 <pre class="test2">{{ item.caseInfo.expected }}</pre>
                             </td>
-                            <td bgcolor="#f2dede">
+                            <td>
                                 <pre class="test2">{{ item.caseInfo.actually }}</pre>
                             </td>
-                            <td bgcolor="#f2dede">{{ item.caseInfo._assert }}</td>
-                            <td bgcolor="#f2dede">{{ item.caseInfo.method }}</td>
-                            <td bgcolor="#f2dede">{{ item.caseInfo.code }}</td>
-                            <td bgcolor="#f2dede">{{ item.caseInfo.rt_code }}</td>
-                            <td bgcolor="#f2dede">
+                            <td >{{ item.caseInfo._assert }}</td>
+                            <td>{{ item.caseInfo.method }}</td>
+                            <td>{{ item.caseInfo.code }}</td>
+                            <td>{{ item.caseInfo.rt_code }}</td>
+                            <td>
                                 <pre class="test2">{{ item.caseInfo.params }}</pre>
                             </td>
-				            <td bgcolor="#f2dede">
+				            <td>
                                 <pre class="test2">{{ item.caseInfo.headers }}</pre>
                             </td>
 

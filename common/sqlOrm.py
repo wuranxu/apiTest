@@ -2,7 +2,7 @@ __author__ = 'Woody'
 '''建立orm
 '''
 
-from run import db
+from initial import db
 
 
 class user(db.Model):

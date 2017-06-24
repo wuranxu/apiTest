@@ -1126,3 +1126,33 @@
 2017-06-23 18:55:22 runner.py[line:155] ERROR request error: 返回数据与预期数据不相等
 2017-06-23 18:55:22 _internal.py[line:87] INFO 127.0.0.1 - - [23/Jun/2017 18:55:22] "GET /run/apiList1.xlsx HTTP/1.1" 200 -
 2017-06-23 18:55:23 _internal.py[line:87] INFO 127.0.0.1 - - [23/Jun/2017 18:55:23] "GET /report/2017-06-23%2018-55-22.html HTTP/1.1" 200 -
+2017-06-24 10:18:34 _internal.py[line:87] INFO  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+2017-06-24 10:18:47 runner.py[line:155] ERROR request error: 返回数据与预期数据不相等
+2017-06-24 10:18:47 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:18:47] "GET /run/apiList.xlsx HTTP/1.1" 200 -
+2017-06-24 10:18:48 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:18:48] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 304 -
+2017-06-24 10:18:50 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:18:50] "GET /favicon.ico HTTP/1.1" 404 -
+2017-06-24 10:19:02 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:19:02] "GET /report/2017-06-24%2010-18-47.html HTTP/1.1" 200 -
+2017-06-24 10:23:14 _internal.py[line:87] INFO  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+2017-06-24 10:25:37 runner.py[line:155] ERROR request error: 返回数据与预期数据不相等
+2017-06-24 10:25:37 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:25:37] "GET /run/apiList.xlsx HTTP/1.1" 200 -
+2017-06-24 10:25:40 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:25:40] "GET /report/2017-06-24%2010-25-37.html HTTP/1.1" 200 -
+2017-06-24 10:25:46 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:25:46] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+2017-06-24 10:27:22 _internal.py[line:87] INFO  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+2017-06-24 10:27:30 runner.py[line:155] ERROR request error: 返回数据与预期数据不相等
+2017-06-24 10:27:30 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:30] "GET /run/apiList.xlsx HTTP/1.1" 200 -
+2017-06-24 10:27:31 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:31] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 200 -
+2017-06-24 10:27:32 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:32] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+2017-06-24 10:27:33 runner.py[line:155] ERROR request error: 返回数据与预期数据不相等
+2017-06-24 10:27:33 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:33] "GET /run/apiList.xlsx HTTP/1.1" 200 -
+2017-06-24 10:27:34 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:34] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 200 -
+2017-06-24 10:27:36 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:36] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+2017-06-24 10:27:37 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:37] "GET /report/2017-06-24%2010-27-33.html HTTP/1.1" 200 -
+2017-06-24 10:27:38 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:38] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 200 -
+2017-06-24 10:27:39 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 10:27:39] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+2017-06-24 11:07:54 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 11:07:54] "GET /report/2017-06-24%2010-27-33.html HTTP/1.1" 200 -
+2017-06-24 11:07:55 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 11:07:55] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 200 -
+2017-06-24 11:07:56 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 11:07:56] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+2017-06-24 11:08:14 runner.py[line:155] ERROR request error: 返回数据与预期数据不相等
+2017-06-24 11:08:14 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 11:08:14] "GET /run/apiList.xlsx HTTP/1.1" 200 -
+2017-06-24 11:08:15 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 11:08:15] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 200 -
+2017-06-24 11:08:16 _internal.py[line:87] INFO 127.0.0.1 - - [24/Jun/2017 11:08:16] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -

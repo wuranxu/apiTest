@@ -4,7 +4,7 @@
 import logging
 from flask import render_template, jsonify
 from initial import app
-from test_method.apiOperator import apiFunc
+from test_method.caseOperator import apiFunc
 import os
 from datetime import datetime
 from flask import send_file
