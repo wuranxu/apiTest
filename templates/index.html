@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易途8自动化测试平台</title>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.js"></script>
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../static/scripts/common.js"></script>
+    <script>
+        window.onload = function create_case() {
+            window.open('/run_xlsx', "_self");
+        }
+    </script>
+    <style>
+        #logout {
+            float: right;
+        }
+        .glyphicon {
+            padding-right: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href={{ url_for('index') }}><span class="glyphicon glyphicon-home"></span>易途8自动化测试平台</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/run_xlsx"><span class="glyphicon glyphicon-list-alt"></span>excel平台</a></li>
+                <li><a href="/case"><span class="glyphicon glyphicon-fire"></span>可视化平台</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-music"></span>秘密基地
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-file"></span>测试报告</a></li>
+                        <li><a href="/homework"><span class="glyphicon glyphicon-book"></span>作业</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-education"></span>答案</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/people"><span class="glyphicon glyphicon-camera"></span>测试组乐园</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav" id="logout">
+                <li class="dropdown"><a href=""><span class="glyphicon glyphicon-user"> {{ user }}</span></a></li>
+                <li class="dropdown"><a href="/logout">注销</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <!--
+    <iframe src='http://localhost:9000/getCaseList' frameborder="0" height="1000" width="1900">
+    </iframe>
+    -->
+</body>
+</html>

@@ -8,7 +8,7 @@ from common.excelReader import reader
 from common.time_handle import handle
 from initial import app
 from test_method.runner import run
-
+from common.time_handle import handle
 result = {}
 
 class apiFunc(object):
@@ -24,22 +24,47 @@ class apiFunc(object):
                                failed=rt['fail']))
         return filename
 
-    def run_test(self, dir, filename, threadNum):
+    def run_test(self, dir, fileList, threadNum):
         global result
         # 读取reader类的实例
-        rd = reader(filepath=os.path.join(dir, filename))
-        rt = self.multiple_run(rd, threadNum)
+        rd_list = []
+        for file in fileList:
+            rd_list.append(reader(filepath=os.path.join(dir, file)))
+        rt = self.multiple_run(rd_list, threadNum)
         # 释放excel文件
-        rd.release_source()
+        for rd in rd_list:
+            rd.release_source()
         return rt
+
+    def run_tests(self, case_list, threadNum):
+        global result
+        # 获取filename里接口用例列表
+        # 拆分用例
+        divide = self.divide_case(len(case_list), threadNum)
+        total_case = [case_list[i:i+divide] for i in range(0, len(case_list), divide)]
+        # 生成Operator类实例
+        obj = run()
+        # 运行case_list里边的case
+        threads = []
+        for i in range(len(total_case)):
+            threads.append(Thread(target=obj.run_case, args=(total_case[i], "thread_{}".format(i), result)))
+        for t in threads:
+            t.start()
+        for t in threads:
+            t.join()
+        return self.deal_with_result(result)
+
+
 
     def divide_case(self, *args):
         case_num, num = args
         return int(case_num / num) if (case_num % num) == 0 else int(case_num / num) + 1
 
-    def multiple_run(self, rd, threadNum):
+    def multiple_run(self, rd_list, threadNum):
         # 获取filename里接口用例列表
-        case_list = rd.get_case_list()
+        case_list = []
+        for rd in rd_list:
+            case_list.extend(rd.get_case_list())
         # 拆分用例
         divide = self.divide_case(len(case_list), threadNum)
         total_case = [case_list[i:i+divide] for i in range(0, len(case_list), divide)]

@@ -15,6 +15,14 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">返回首页</a>
+        </div>
+
+        </div>
+    </nav>
     <p id="fileName">{{ fileName }}</p>
     <div class="row">
         <div class="col-lg-1"></div>
@@ -50,15 +58,9 @@
     <div class="row">
         <div class="col-lg-1"></div>
         <div class="col-lg-7">
-            <a id='link' class='btn btn-primary ' href="#">点击查看详情</a>
+            <a id='link' class='btn btn-primary ' href="/report/{{ fileName }}" target="_blank">点击查看详情</a>
         </div>
     </div>
-    <script>
-        window.onload = function openReport() {
-            var fileName = document.getElementById('fileName').innerHTML;
-            document.getElementById('link').setAttribute('href', "/report/"+fileName);
-        }
-    </script>
 
 </body>
 </html>

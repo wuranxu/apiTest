@@ -5,6 +5,7 @@ import xlrd
 import os
 import logging
 from common.function import Operator
+import json
 
 
 class reader(object):
@@ -22,6 +23,37 @@ class reader(object):
                         Operator.get_current_func(), filepath, str(err)))
         if not self.fileHandle:
             raise Exception('打开本地excel文件失败! 请检查日志！')
+
+    def get_case_list_by_id(self, case_id):
+        '''
+        :return: excel中存放的用例列表
+        '''
+        try:
+            # 获取excel所有sheet
+            sheets = self.fileHandle.sheets()
+            # 遍历sheet
+            for index in range(len(sheets)):
+                sheet = self.fileHandle.sheet_by_index(index)
+                rows = sheet.nrows
+                # 如果sheet为空，那么rows是0
+                if rows:
+                    for row in range(rows):
+                        case_info = sheet.row_values(row)
+                        # 过滤表头, id或method出现在某一行数据里则确认它为表头
+                        if case_info[0] != 'id' and int(case_info[0]) == int(case_id):
+                            # 将用例信息如id，name等组成dict添加到case_list
+                            return dict(id=case_info[0], name=case_info[1],
+                                     params=case_info[2], url=case_info[3],
+                                     method=case_info[4], code=case_info[5],
+                                     headers=case_info[6], _assert=case_info[7],
+                                     expected=case_info[8], precondition=case_info[9],
+                                     pre_data=case_info[10], enable=case_info[11]
+                                     )
+        # 捕获异常
+        except Exception as err:
+            print("{} error: {}".format(Operator.get_current_func(), str(err)))
+            logging.error("{} error: {}".format(Operator.get_current_func(), str(err)))
+        return None
 
     def get_case_list(self):
         '''
@@ -49,12 +81,20 @@ class reader(object):
                                     # 这是合并后的单元格，需要重新取一次数据
                                     case_info[index] = sheet.cell_value(*merged.get((row, index)))
                             # 将用例信息如id，name等组成dict添加到case_list
+                            if case_info[9]:
+                                pre = []
+                                for x in json.loads(case_info[9]):
+                                    pre.append(self.get_case_list_by_id(x))
+                            else:
+                                pre = None
                             case_list.append(
                                 dict(id=case_info[0], name=case_info[1],
                                      params=case_info[2], url=case_info[3],
                                      method=case_info[4], code=case_info[5],
                                      headers=case_info[6], _assert=case_info[7],
-                                     expected=case_info[8], enable=case_info[9])
+                                     expected=case_info[8], precondition=case_info[9],
+                                     pre_data=case_info[10], enable=case_info[14], sql_verify=case_info[12],
+                                     pre=pre, sql_prepare=case_info[11], sql_clean=case_info[13])
                             )
         # 捕获异常
         except Exception as err:

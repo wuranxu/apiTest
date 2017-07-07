@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>易途8自动化测试平台登陆页面</title>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.js"></script>
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../static/scripts/common.js"></script>
+    <script>
+        window.onload = setTimeout(function () {
+            window.open('/', '_self')
+        }, 3000)
+    </script>
+    <style>
+        .row {
+            padding: 2px;
+        }
+        button {
+            float: right;
+        }
+        a {
+            margin-top: 6px;
+        }
+        h1 {
+            text-align: left;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <h1>恭喜您注册成功!3秒后页面自动跳转到首页!</h1>
+        <a id="now" href="/" target="_self">点击手动跳转</a>
+    </div>
+
+</body>
+</html>

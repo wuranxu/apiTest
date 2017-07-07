@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易途8接口测试框架首页</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.min.js"></script>
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap-multiselect.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap-multiselect.css" rel="stylesheet" />
+
+    <style>
+        #title {
+            padding-left: 15px;
+        }
+        #case {
+            padding-left: 30px;
+        }
+        .btn.btn-primary {
+            float: right;
+        }
+        #blank {
+            height: 300px;
+        }
+        #logout {
+            float: right;
+        }
+        .glyphicon {
+            padding-right: 3px;
+        }
+    </style>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href={{ url_for('index') }}><span class="glyphicon glyphicon-home"></span>易途8自动化测试平台</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/run_xlsx"><span class="glyphicon glyphicon-list-alt"></span>excel平台</a></li>
+                <li><a href="/case"><span class="glyphicon glyphicon-fire"></span>可视化平台</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-music"></span>秘密基地
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-file"></span>测试报告</a></li>
+                        <li><a href="/homework"><span class="glyphicon glyphicon-book"></span>作业</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-education"></span>答案</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/people"><span class="glyphicon glyphicon-camera"></span>测试组乐园</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav" id="logout">
+                <li class="dropdown"><a href=""><span class="glyphicon glyphicon-user"> {{ user }}</span></a></li>
+                <li class="dropdown"><a href="/logout">注销</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <form role="form" method='post' action="/run" name="run">
+        <div class="form-group">
+            <div id='title'>
+                <label for="name">选择需要执行的测试用例</label>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div id='case' class="col-lg-5">
+                    <select id="sel_search_orderstatus" multiple="multiple" name="xlsx">
+                        {% for item in fileList %}
+                        <option>{{ item }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+        <div id='blank' class="row"></div>
+        <div id='button' class="row">
+            <div class="col-lg-3">
+                <button type='submit' onclick="check();" class="btn btn-primary">运行</button>
+            </div>
+        </div>
+
+    </form>
+</head>
+<body>
+
+</body>
+<script>
+    $(function () {
+    $('#sel_search_orderstatus').multiselect();
+});
+</script>
+</html>

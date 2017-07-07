@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易途8测试平台可视化页面</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.min.js"></script>
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap-multiselect.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <script src="../static/scripts/common.js"></script>
+    <style>
+        #title {
+            padding-left: 15px;
+        }
+        #case {
+            padding-left: 30px;
+        }
+        .btn.btn-primary {
+            float: right;
+        }
+        #blank {
+            height: 300px;
+        }
+        #logout {
+            float: right;
+        }
+        #search {
+            float: left;
+        }
+        .glyphicon {
+            padding-right: 3px;
+        }
+    </style>
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href={{ url_for('index') }}><span class="glyphicon glyphicon-home"></span>易途8自动化测试平台</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="/run_xlsx"><span class="glyphicon glyphicon-list-alt"></span>excel平台</a></li>
+                <li><a href="/case"><span class="glyphicon glyphicon-fire"></span>可视化平台</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-music"></span>秘密基地
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-file"></span>测试报告</a></li>
+                        <li class="active"><a href="/homework"><span class="glyphicon glyphicon-book"></span>作业</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-education"></span>答案</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/people"><span class="glyphicon glyphicon-camera"></span>测试组乐园</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav" id="logout">
+                <li class="dropdown"><a href=""><span class="glyphicon glyphicon-user"></span>{{ user }}</a></li>
+                <li class="dropdown"><a href="/logout">注销</a></li>
+            </ul>
+
+        </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="myModal_alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        警告
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    请至少选择一条测试用例!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="delete_case();" class="btn btn-primary" data-dismiss="modal">
+                        确认
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        提示
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    用例删除成功!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="see_case();" class="btn btn-primary" data-dismiss="modal">
+                        确认
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        警告
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    确认删除用例吗?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" onclick="delete_case(this);" class="btn btn-primary" data-dismiss="modal">
+                        确认
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="row">
+        <div class="col-lg-1" style="padding-right: 0">
+            <div class="list-group">
+              <button type="button" class="list-group-item" onclick="see_case()"><span class="glyphicon glyphicon-align-left">作业列表</span></button>
+            </div>
+        </div>
+        <div class="col-lg-11" id="show_html" style="padding-left: 0">
+            <div class="row">
+                <div class="col-lg-9"></div>
+                <div class="col-lg-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="输入测试用例名" aria-describedby="basic-addon2">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-bottom: 5px"></div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>作业时间</th>
+                        <th>作业文件</th>
+                        <th>完成人数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in homework %}
+                        <tr class="success">
+                            <td>{{ item.time }}</td>
+                            <td><a href="/homework/download/{{ item.file }}">{{ item.file }}</a></td>
+                            <td>{{ item.num }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+        </div>
+    </div>
+</head>
+<body>
+
+</body>
+<script>
+    function create_case() {
+        window.open('/create_case', "_self");
+    }
+    function see_case() {
+        window.open('/case', "_self");
+    }
+    function number() {
+        var num = 0;
+        var eles = $('input[type="checkbox"]');
+        for(var i=0; i<eles.length;i++){
+            if(eles[i].checked){
+                num += 1;
+            }
+        }
+        return num
+    }
+    function check(element) {
+        var num = number();
+        if (num > 0){
+            //$('#myModal').click();
+            element.setAttribute("data-target", "#myModal");
+        }
+        else{
+            //alert("请至少选择一条用例!");
+            element.setAttribute("data-target", "#myModal_alert");
+        }
+    }
+
+
+
+    function delete_case(_this) {
+        var case_list = [];
+        var eles = $('input[type="checkbox"]');
+        var status = false;
+        for(var i=0; i<eles.length;i++){
+            if (eles[i].checked){
+                var tr = eles[i].parentNode.parentNode;
+                var case_name = eles[i].parentNode.nextElementSibling.innerHTML;
+                case_list.push(case_name);
+
+                //$.post("/delete_case", {'case_name': case_list}, "form").done(function(data){
+                    // var value = JSON.parse(data);
+                  //  if(data.status){
+                    //    alert("删除成功!");
+                      //  window.open("/case", "_self");
+                    //}
+                //})
+            }
+
+        }
+        if(case_list.length){
+            $.ajax({
+                    url: "/delete_case",
+                    type: "POST",
+                    data: JSON.stringify({
+                        "case_name": case_list
+                    }),
+                    dataType: "json",
+                    //traditional: true,
+                    contentType: "application/json",
+                    success: function(data) {
+                        //do sth...
+                        if (data.status) {
+                            //_this.setAttribute("data_target", "#myModal3");
+                            alert("删除成功!");
+                            window.open("/case", "_self");
+                        }
+                    }
+                });
+        }
+
+        $("#myModal").attr("aria-hidden", true);
+        //$("#myModal").attr("data-dismiss", modal)
+
+    }
+
+</script>
+</html>

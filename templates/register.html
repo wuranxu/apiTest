@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>易途8自动化测试平台登陆页面</title>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.js"></script>
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+        function check(form) {
+            var p1 = form.passwd1;
+            var p2 = form.passwd2;
+            if (p1.value !== p2.value) {
+                p2.oninvalid();
+                return false;
+            }
+            return true;
+        }
+        onload = function() {
+            var p2 = document.forms["my_f1"].passwd2;
+            p2.oninvalid = function() {
+                this.setCustomValidity("密码不一致，请重新输入");
+            };
+            p2.oninput = function() {
+                this.setCustomValidity("");
+            }
+
+        }
+    </script>
+    <style>
+        .row {
+            padding: 2px;
+        }
+        button {
+            float: right;
+        }
+        a {
+            margin-top: 6px;
+        }
+        h3 {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-7">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-5">
+                    <h3>欢迎加入易途8自动化测试平台</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <form name="my_f1" action="/register" method="post" onsubmit="return check(this);">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <label>用户名</label>
+                            <input name='user' type="text" class="form-control" required="true" placeholder="输入用户名">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <label>密码 </label>
+                            <input name='passwd1' type="password" class="form-control" placeholder="输入密码" required="true" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <label>确认密码</label>
+                            <input name='passwd2' type="password" class="form-control" placeholder="输入密码" required="true" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3">
+                        <button class="btn btn-primary">注册</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3">
+                    {% if info %}
+                        <h5>{{ info }}</h5>
+                    {% else %}
+                        <h5></h5>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

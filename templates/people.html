@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>易途8测试平台可视化页面</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.min.js"></script>
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap-multiselect.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <script src="../static/scripts/common.js"></script>
+    <style>
+        #title {
+            padding-left: 15px;
+        }
+        #case {
+            padding-left: 30px;
+        }
+        .btn.btn-primary {
+            float: right;
+        }
+        #blank {
+            height: 300px;
+        }
+        #logout {
+            float: right;
+        }
+        #search {
+            float: left;
+        }
+        .glyphicon {
+            padding-right: 3px;
+        }
+    </style>
+    <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href={{ url_for('index') }}><span class="glyphicon glyphicon-home"></span>易途8自动化测试平台</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="/run_xlsx"><span class="glyphicon glyphicon-list-alt"></span>excel平台</a></li>
+                <li><a href="/case"><span class="glyphicon glyphicon-fire"></span>可视化平台</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-music"></span>秘密基地
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-file"></span>测试报告</a></li>
+                        <li><a href="/homework"><span class="glyphicon glyphicon-book"></span>作业</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-education"></span>答案</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/people" class="active"><span class="glyphicon glyphicon-camera"></span>测试组乐园</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav" id="logout">
+                <li class="dropdown"><a href=""><span class="glyphicon glyphicon-user"></span>{{ user }}</a></li>
+                <li class="dropdown"><a href="/logout">注销</a></li>
+            </ul>
+
+        </div>
+        </div>
+    </nav>
+    <div class="row" style="padding-bottom: 5px"></div>
+    <image src="../static/images/haha.gif"></image>
+
+</head>
+<body>
+
+</body>
+<script>
+    function create_case() {
+        window.open('/create_case', "_self");
+    }
+    function see_case() {
+        window.open('/case', "_self");
+    }
+    function number() {
+        var num = 0;
+        var eles = $('input[type="checkbox"]');
+        for(var i=0; i<eles.length;i++){
+            if(eles[i].checked){
+                num += 1;
+            }
+        }
+        return num
+    }
+    function check(element) {
+        var num = number();
+        if (num > 0){
+            //$('#myModal').click();
+            element.setAttribute("data-target", "#myModal");
+        }
+        else{
+            //alert("请至少选择一条用例!");
+            element.setAttribute("data-target", "#myModal_alert");
+        }
+    }
+
+
+
+    function delete_case(_this) {
+        var case_list = [];
+        var eles = $('input[type="checkbox"]');
+        var status = false;
+        for(var i=0; i<eles.length;i++){
+            if (eles[i].checked){
+                var tr = eles[i].parentNode.parentNode;
+                var case_name = eles[i].parentNode.nextElementSibling.innerHTML;
+                case_list.push(case_name);
+
+                //$.post("/delete_case", {'case_name': case_list}, "form").done(function(data){
+                    // var value = JSON.parse(data);
+                  //  if(data.status){
+                    //    alert("删除成功!");
+                      //  window.open("/case", "_self");
+                    //}
+                //})
+            }
+
+        }
+        if(case_list.length){
+            $.ajax({
+                    url: "/delete_case",
+                    type: "POST",
+                    data: JSON.stringify({
+                        "case_name": case_list
+                    }),
+                    dataType: "json",
+                    //traditional: true,
+                    contentType: "application/json",
+                    success: function(data) {
+                        //do sth...
+                        if (data.status) {
+                            //_this.setAttribute("data_target", "#myModal3");
+                            alert("删除成功!");
+                            window.open("/case", "_self");
+                        }
+                    }
+                });
+        }
+
+        $("#myModal").attr("aria-hidden", true);
+        //$("#myModal").attr("data-dismiss", modal)
+
+    }
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

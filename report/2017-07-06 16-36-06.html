@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <title>易途8接口测试框架</title>
+    <style>
+        .test1 {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background-color: #dff0d8;
+            display: none;
+        }
+        .test2 {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background-color: #f2dede;
+            display: none;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        .hd {
+            display: none;
+        }
+
+        .forgive_green td{
+            background-color: #dff0d8;
+        }
+
+        .fail_red td {
+            background-color: #f2dede;
+        }
+
+    </style>
+</head>
+<body>
+	<div class='row'>
+		<div class='col-lg-12'>
+			<table class="table table-condensed table-bordered table-hover table-striped">
+			  <caption>接口自动化测试报告</caption>
+			  <thead>
+			    <tr>
+                  <th>查看</th>
+			      <th>名称</th>
+                  <th>地址</th>
+                  <th>结果</th>
+                  <th>期望</th>
+                  <th>实际</th>
+                  <th>断言</th>
+                  <th>请求方式</th>
+                  <th>期望code</th>
+                  <th>实际code</th>
+			      <th>参数</th>
+			      <th>请求头</th>
+
+			    </tr>
+			  </thead>
+			  <tbody>
+			        
+		  	              
+				    	<tr class="fail_red">
+                            <td>
+                                <button onclick="show(this)">详情</button>
+                                <button class='hd' onclick="hide(this)">隐藏</button>
+                            </td>
+				            <td>司导端不存在的用户登陆</td>
+                            <td>http://devapi2017.yitu8.cn/driver/user/userRegister</td>
+                            <td >NO</td>
+                            <td>
+                                <pre class="test2">{
+ &#34;resultCode&#34;: 1001,
+ &#34;resultMessage&#34;: &#34;用户不存在&#34;
+}</pre>
+                            </td>
+                            <td>
+                                <pre class="test2">{
+ &#34;resultCode&#34;: 1001,
+ &#34;resultMessage&#34;: &#34;lose params :mobileCode&#34;
+}</pre>
+                            </td>
+                            <td >Equal</td>
+                            <td>POST</td>
+                            <td>200</td>
+                            <td>200</td>
+                            <td>
+                                <pre class="test2">{
+ &#34;appId&#34;: 1009,
+ &#34;actionTime&#34;: &#34;2017-06-12 15:00:00&#34;,
+ &#34;requestData&#34;: {
+  &#34;areaCode&#34;: 86,
+  &#34;mobile&#34;: &#34;18516600716&#34;,
+  &#34;password&#34;: &#34;wuranxu&#34;
+ }
+}</pre>
+                            </td>
+				            <td>
+                                <pre class="test2">{
+ &#34;Content-Type&#34;: &#34;application/json&#34;
+}</pre>
+                            </td>
+
+				    	</tr>
+			    	
+			  </tbody>
+			</table>
+		</div>
+	</div>
+    <script>
+        function show(element) {
+            var pres = element.parentNode.parentNode.getElementsByTagName('pre');
+            for(var i=0; i<pres.length; i++){
+                pres[i].style.display = 'block';
+            }
+            element.nextElementSibling.style.display = 'block';
+            element.style.display = 'none';
+        }
+        function hide(element) {
+            var pres = element.parentNode.parentNode.getElementsByTagName('pre');
+            for(var i=0; i<pres.length; i++){
+                pres[i].style.display = 'none';
+            }
+            element.parentNode.firstElementChild.style.display = 'block';
+            element.style.display = 'none';
+
+        }
+    </script>
+</body>
+</html>

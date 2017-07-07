@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出错啦!</title>
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.min.js"></script>
+    <script src="../static/scripts/common.js"></script>
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap-multiselect.js"></script>
+    <link href="../static/bootstrap-3.3.7/dist/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href={{ url_for('index') }}><span class="glyphicon glyphicon-home">易途8自动化测试平台</span></a>
+        </div>
+
+        </div>
+    </nav>
+    <div row="class">
+        <h5>{{ errorInfo }}</h5>
+
+    </div>
+
+</head>
+<body>
+
+</body>
+<script>
+        window.onload = setTimeout(function () {
+            window.open('/', '_self')
+        }, 3000)
+
+</script>
+</html>

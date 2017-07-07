@@ -1,0 +1,122 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <script src="../static/scripts/jquery.js"></script>
+    <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../static/scripts/common.js"></script>
+    <style>
+        button {
+            float: right;
+        }
+        #logout {
+        float: right;
+        }
+        .glyphicon {
+            padding-right: 3px;
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href={{ url_for('index') }}><span class="glyphicon glyphicon-home"></span>易途8自动化测试平台</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a href="/run_xlsx"><span class="glyphicon glyphicon-list-alt"></span>excel平台</a></li>
+                    <li class="active"><a href="/case"><span class="glyphicon glyphicon-fire"></span>可视化平台</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-music"></span>秘密基地
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="glyphicon glyphicon-file"></span>测试报告</a></li>
+                            <li><a href="/homework"><span class="glyphicon glyphicon-book"></span>作业</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-education"></span>答案</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/people"><span class="glyphicon glyphicon-camera"></span>测试组乐园</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav" id="logout">
+                    <li class="dropdown"><a href=""><span class="glyphicon glyphicon-user"> {{ user }}</span></a></li>
+                    <li class="dropdown"><a href="/logout">注销</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <form action="/case/new" method="post">
+                    <div class="form-group">
+                        <label for="case_name">用例名称：</label>
+                        <input class="form-control" placeholder="请输入测试用例的名称" name="case_name">
+                    </div>
+                    <div class="form-group">
+					    <label for="assert">请求头：</label>
+                        <textarea class="form-control" rows="4" name="headers" placeholder="请输入请求头"></textarea>
+					</div>
+                    <div class="form-group">
+                        <label>接口地址：</label>
+                        <input class="form-control" value='http://devapi2017.yitu8.cn/' name="addr">
+                    </div>
+                    <div class="form-group" name='content'>
+                        <label>用例描述：</label>
+                        <input class="form-control" placeholder="请输入接口简要描述" name="addr">
+                    </div>
+                    <div class="form-group">
+                        <label>参数：</label>
+                        <textarea class="form-control" rows="8" name="params" placeholder="请输入接口参数，如为GET请求可不填"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label>前置条件：</label>
+                        <textarea class="form-control" rows="3" name="precondition" placeholder="请输入前置条件"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label>数据库准备：</label>
+                        <textarea class="form-control" rows="4" name="sql_prepare" placeholder="请输入数据库准备语句"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>数据库校验：</label>
+                        <textarea class="form-control" rows="4" name="sql_verify" placeholder="请输入数据库校验语句"></textarea>
+                    </div>                    <div class="form-group">
+                        <label>数据库清理：</label>
+                        <textarea class="form-control" rows="4" name="sql_clean" placeholder="请输入数据库清理语句"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>预期结果：</label>
+                        <textarea class="form-control" rows="8" name="expect" placeholder="请输入预期结果"></textarea>
+                    </div>
+					<div class="form-group">
+					    <label for="assert">断言方式：</label>
+					    <select class="form-control" name='assert'>
+					      <option>Equal</option>
+					      <option>In</option>
+					      <option>None</option>
+					      <option>Not None</option>
+					      <option>Contain</option>
+					      <option>Not Equal</option>
+                          <option>Not In</option>
+					    </select>
+					</div>
+					<div class="form-group">
+					    <label for="method">请求方式：</label>
+					    <select class="form-control" name='method'>
+					      <option>GET</option>
+					      <option>POST</option>
+					      <option>PUT</option>
+					      <option>DELETE</option>
+					    </select>
+					</div>
+                    <button type="submit" class="btn btn-default">确定</button>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
