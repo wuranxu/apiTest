@@ -184,7 +184,8 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>列表</th>
+                        <th>勾选</th>
+                        <th>编号</th>
                         <th>用例名称</th>
                         <th>地址</th>
                         <th>参数</th>
@@ -200,6 +201,7 @@
                         {% if item.enable %}
                             <tr class="success">
                                 <td><input type="checkbox"></td>
+                                <td>{{ loop.index }}</td>
                                 <td class="case_name">{{ item.name }}</td>
                                 <td>{{ item.url }}</td>
                                 <td>{{ item.params }}</td>
@@ -214,6 +216,7 @@
                                 <td>
                                      <input type="checkbox">
                                 </td>
+                                <td>{{ loop.index }}</td>
                                 <td class="case_name">{{ item.name }}</td>
                                 <td>{{ item.url }}</td>
                                 <td>{{ item.params }}</td>

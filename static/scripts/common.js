@@ -52,9 +52,7 @@ function run(element) {
         //alert("请至少选择一条用例!");
         element.setAttribute("data-target", "#myModal_alert");
     }
-
-
-
-
-
+}
+function spinner() {
+    $("body").mLoading();
 }

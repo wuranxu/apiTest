@@ -5,13 +5,16 @@
     <title>易途8测试平台可视化页面</title>
     <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script src="../static/scripts/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="../static/css/jquery.mloading.css">
     <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <link href="../static/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
-
     <script src="../static/bootstrap-3.3.7/dist/js/bootstrap-multiselect.js"></script>
     <link href="../static/bootstrap-3.3.7/dist/css/bootstrap-multiselect.css" rel="stylesheet" />
+    <script src="../static/scripts/jquery.mloading.js"></script>
     <script src="../static/scripts/common.js"></script>
+    <script>
+        function test() {$("body").mLoading();}
+    </script>
     <style>
         #title {
             padding-left: 15px;
@@ -67,6 +70,8 @@
         </div>
         </div>
     </nav>
+    <button onclick="test();">test</button>
+    <div id="fakeloader"></div>
     <div class="row" style="padding-bottom: 5px"></div>
     <image src="../static/images/haha.gif"></image>
 

@@ -8334,3 +8334,186 @@
 2017-07-07 15:07:36 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:07:36] "GET /people HTTP/1.1" 200 -
 2017-07-07 15:07:39 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:07:39] "GET / HTTP/1.1" 302 -
 2017-07-07 15:07:39 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:07:39] "GET /for_login HTTP/1.1" 200 -
+2017-07-07 15:10:37 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:10:41 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:10:41] "GET /index HTTP/1.1" 404 -
+2017-07-07 15:10:44 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:10:44] "GET / HTTP/1.1" 200 -
+2017-07-07 15:10:47 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:10:47] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:10:53 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:10:53] "GET /run_case HTTP/1.1" 405 -
+2017-07-07 15:10:56 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:10:56] "GET / HTTP/1.1" 200 -
+2017-07-07 15:11:03 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:03] "POST /login HTTP/1.1" 200 -
+2017-07-07 15:11:03 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:03] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:11:06 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:06] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:11:09 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:09] "GET /homework HTTP/1.1" 200 -
+2017-07-07 15:11:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:11] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:11:12 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:12] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:11:13 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:13] "GET / HTTP/1.1" 200 -
+2017-07-07 15:11:13 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:13] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:11:13 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:13] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:11:14 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:14] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:11:15 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:15] "GET /create_case HTTP/1.1" 200 -
+2017-07-07 15:11:16 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:16] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:11:16 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:16] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:11:20 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:20] "GET /edit_case/%E5%8F%B8%E5%AF%BC%E7%AB%AF%E4%B8%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E7%94%A8%E6%88%B7%E7%99%BB%E9%99%86ee HTTP/1.1" 200 -
+2017-07-07 15:11:24 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:24] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:11:25 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:11:25] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:15:55 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:15:55] "GET /homework HTTP/1.1" 200 -
+2017-07-07 15:15:58 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:15:58] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:15:59 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:15:59] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:16:00 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:16:00] "GET / HTTP/1.1" 200 -
+2017-07-07 15:16:00 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:16:00] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:24:06 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:24:06] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:24:34 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:24:34] "GET /create_case HTTP/1.1" 200 -
+2017-07-07 15:24:43 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:24:43] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:24:46 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:24:46] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:28:58 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:28:58] "GET /homework HTTP/1.1" 200 -
+2017-07-07 15:29:09 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:29:09] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:29:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:29:11] "GET / HTTP/1.1" 200 -
+2017-07-07 15:29:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:29:11] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:29:13 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:29:13] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:29:14 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:29:14] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:31:02 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:02] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:31:09 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:31:10 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:10] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:31:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:11] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:31:14 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:14] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:31:15 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:15] "GET / HTTP/1.1" 200 -
+2017-07-07 15:31:15 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:15] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 15:31:30 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:31:30] "GET /case HTTP/1.1" 200 -
+2017-07-07 15:45:40 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:53:42 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:53:46 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:53:46] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:53:46 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:53:46] "GET /static/css/fakeLoader.css HTTP/1.1" 200 -
+2017-07-07 15:53:46 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:53:46] "GET /static/css/spinner.css HTTP/1.1" 404 -
+2017-07-07 15:53:46 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:53:46] "GET /static/scripts/fakeLoader.min.js HTTP/1.1" 200 -
+2017-07-07 15:53:48 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:53:48] "GET /static/css/spinner.css HTTP/1.1" 404 -
+2017-07-07 15:53:48 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:53:48] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css.map HTTP/1.1" 200 -
+2017-07-07 15:55:59 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:55:59 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:55:59] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:55:59 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:55:59] "GET /static/css/spinner.css HTTP/1.1" 404 -
+2017-07-07 15:56:01 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:01] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:56:01 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:01] "GET /static/css/spinner.css HTTP/1.1" 404 -
+2017-07-07 15:56:01 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:01] "GET /static/css/spinner.css HTTP/1.1" 404 -
+2017-07-07 15:56:24 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:56:25 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:25] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:56:28 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:28] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:56:35 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:35] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:56:36 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:56:36] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:57:14 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:14] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:57:15 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:15] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:57:23 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:23] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:57:28 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:28] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:57:33 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:33] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 15:57:35 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:35] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:57:38 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:57:38] "GET /yourPath/customizedImage.gif HTTP/1.1" 404 -
+2017-07-07 16:03:59 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:04:00 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:04:00] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:04:02 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:04:02] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:04:16 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:04:16] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:05:39 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:05:39 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:05:39] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:05:42 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:05:42] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:06:23 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:06:24 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:06:24] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:07:13 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:07:13] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:12:12 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:12:12] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:12:51 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:12:52 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:12:52] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:12:52 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:12:52] "GET /static/css/jquery.mloading.css HTTP/1.1" 200 -
+2017-07-07 16:12:52 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:12:52] "GET /static/scripts/jquery.mloading.js HTTP/1.1" 200 -
+2017-07-07 16:14:18 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:14:18] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:14:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:14:21] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:17:10 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:17:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:17:11] "GET / HTTP/1.1" 200 -
+2017-07-07 16:17:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:17:11] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:17:14 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:17:14] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:17:15 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:17:15] "GET / HTTP/1.1" 200 -
+2017-07-07 16:17:15 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:17:15] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:17:31 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:17:32 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:17:32 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:17:32 runner.py[line:220] ERROR request error: 返回数据{'resultMessage': '请先登录', 'resultCode': '1011'}没有包含预期数据{'resultMessage': '操作成功', 'resultCode': 1000}
+2017-07-07 16:17:32 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:17:32] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:18:48 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:18:50 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:18:50] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:18:52 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:18:52] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:18:55 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:18:55] "GET / HTTP/1.1" 200 -
+2017-07-07 16:18:55 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:18:55] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:19:00 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:19:00] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:20:22 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:22] "GET / HTTP/1.1" 200 -
+2017-07-07 16:20:22 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:22] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:20:23 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:23] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:20:26 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:26] "GET / HTTP/1.1" 200 -
+2017-07-07 16:20:26 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:26] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:20:28 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:28] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:20:31 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:31] "GET / HTTP/1.1" 200 -
+2017-07-07 16:20:31 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:31] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:20:58 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:58] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:20:59 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:59] "GET / HTTP/1.1" 200 -
+2017-07-07 16:20:59 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:20:59] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:21:02 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:02] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:21:11 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:11] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:21:26 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:26] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:21:27 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:27] "GET / HTTP/1.1" 200 -
+2017-07-07 16:21:27 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:27] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:21:32 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:21:32 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:21:33 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:21:33 runner.py[line:220] ERROR request error: 返回数据{'resultCode': '1011', 'resultMessage': '请先登录'}没有包含预期数据{'resultCode': 1000, 'resultMessage': '操作成功'}
+2017-07-07 16:21:34 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:34] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:21:37 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:21:37] "GET /report/2017-07-07%2016-21-34.html HTTP/1.1" 200 -
+2017-07-07 16:22:51 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:22:56 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:22:56] "GET / HTTP/1.1" 200 -
+2017-07-07 16:22:56 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:22:56] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:22:59 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:22:59] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:23:00 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:00] "GET / HTTP/1.1" 200 -
+2017-07-07 16:23:00 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:00] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:23:05 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:05 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:06 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:06 runner.py[line:220] ERROR request error: 返回数据{'resultCode': '1011', 'resultMessage': '请先登录'}没有包含预期数据{'resultCode': 1000, 'resultMessage': '操作成功'}
+2017-07-07 16:23:06 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:06] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:23:15 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:23:19 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:19] "GET / HTTP/1.1" 200 -
+2017-07-07 16:23:19 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:19] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/bootstrap-3.3.7/dist/css/bootstrap.min.css HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/css/jquery.mloading.css HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/bootstrap-3.3.7/dist/css/bootstrap-multiselect.css HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/scripts/jquery.min.js HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/bootstrap-3.3.7/dist/js/bootstrap.min.js HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/scripts/jquery.mloading.js HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/bootstrap-3.3.7/dist/js/bootstrap-multiselect.js HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/scripts/common.js HTTP/1.1" 200 -
+2017-07-07 16:23:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:21] "GET /static/bootstrap-3.3.7/dist/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 -
+2017-07-07 16:23:27 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:27 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:27 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:28 runner.py[line:220] ERROR request error: 返回数据{'resultCode': '1011', 'resultMessage': '请先登录'}没有包含预期数据{'resultMessage': '操作成功', 'resultCode': 1000}
+2017-07-07 16:23:28 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:28] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:23:32 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:32] "GET / HTTP/1.1" 200 -
+2017-07-07 16:23:33 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:33] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:23:37 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:37] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:23:38 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:38] "GET / HTTP/1.1" 200 -
+2017-07-07 16:23:38 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:38] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:23:39 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:39] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:23:40 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:40] "GET / HTTP/1.1" 200 -
+2017-07-07 16:23:40 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:40] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:23:44 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:44 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:44 runner.py[line:220] ERROR request error: 返回数据与预期数据不相等
+2017-07-07 16:23:44 runner.py[line:220] ERROR request error: 返回数据{'resultCode': '1011', 'resultMessage': '请先登录'}没有包含预期数据{'resultMessage': '操作成功', 'resultCode': 1000}
+2017-07-07 16:23:45 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:23:45] "POST /run HTTP/1.1" 200 -
+2017-07-07 16:24:35 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:24:35] "GET / HTTP/1.1" 200 -
+2017-07-07 16:24:35 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:24:35] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:24:36 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:24:36] "GET /case HTTP/1.1" 200 -
+2017-07-07 16:24:56 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:24:56] "POST /run_case HTTP/1.1" 200 -
+2017-07-07 16:24:58 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:24:58] "GET / HTTP/1.1" 200 -
+2017-07-07 16:24:58 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:24:58] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:25:17 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:25:17] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:26:27 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:26:27] "GET /case HTTP/1.1" 200 -
+2017-07-07 16:28:21 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:28:21] "GET /people HTTP/1.1" 200 -
+2017-07-07 16:28:24 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:28:24] "GET / HTTP/1.1" 200 -
+2017-07-07 16:28:24 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:28:24] "GET /run_xlsx HTTP/1.1" 200 -
+2017-07-07 16:31:44 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:31:44] "GET /case HTTP/1.1" 200 -
+2017-07-07 16:33:43 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 16:33:43 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 16:33:43] "GET /case HTTP/1.1" 500 -
