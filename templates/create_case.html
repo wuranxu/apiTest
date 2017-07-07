@@ -4,6 +4,8 @@
     <script src="../static/scripts/jquery.js"></script>
     <script src="../static/bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="../static/scripts/common.js"></script>
+    <script src="../static/scripts/jquery.mloading.js"></script>
+    <link rel="stylesheet" href="../static/css/jquery.mloading.css">
     <style>
         button {
             float: right;
@@ -61,11 +63,11 @@
 					</div>
                     <div class="form-group">
                         <label>接口地址：</label>
-                        <input class="form-control" value='http://devapi2017.yitu8.cn/' name="addr">
+                        <input class="form-control" value='http://devapi2017.yitu8.cn/' name="url">
                     </div>
-                    <div class="form-group" name='content'>
+                    <div class="form-group">
                         <label>用例描述：</label>
-                        <input class="form-control" placeholder="请输入接口简要描述" name="addr">
+                        <input class="form-control" placeholder="请输入接口简要描述" name="content">
                     </div>
                     <div class="form-group">
                         <label>参数：</label>
@@ -90,7 +92,7 @@
                     </div>
                     <div class="form-group">
                         <label>预期结果：</label>
-                        <textarea class="form-control" rows="8" name="expect" placeholder="请输入预期结果"></textarea>
+                        <textarea class="form-control" rows="8" name="expected" placeholder="请输入预期结果"></textarea>
                     </div>
 					<div class="form-group">
 					    <label for="assert">断言方式：</label>
@@ -113,7 +115,7 @@
 					      <option>DELETE</option>
 					    </select>
 					</div>
-                    <button type="submit" class="btn btn-default">确定</button>
+                    <button type="submit" onclick="spinner();" class="btn btn-default">确定</button>
                 </form>
             </div>
         </div>

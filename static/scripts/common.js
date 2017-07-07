@@ -14,7 +14,7 @@ function run(element) {
         var eles = $('input[type="checkbox"]');
         for(var i=0; i<eles.length;i++){
             if (eles[i].checked){
-                var case_name = eles[i].parentNode.nextElementSibling.innerHTML;
+                var case_name = eles[i].parentNode.nextElementSibling.nextElementSibling.innerHTML;
                 case_list.push(case_name);
 
                 //$.post("/delete_case", {'case_name': case_list}, "form").done(function(data){
@@ -28,6 +28,7 @@ function run(element) {
 
         }
         if(case_list.length){
+            spinner();
             $.ajax({
                     url: "/run_case",
                     type: "POST",
