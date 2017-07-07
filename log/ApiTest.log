@@ -8328,3 +8328,9 @@
 2017-07-07 14:16:22 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 14:16:22] "GET /for_login HTTP/1.1" 200 -
 2017-07-07 14:16:25 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 14:16:25] "GET /for_register HTTP/1.1" 200 -
 2017-07-07 14:18:35 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 14:18:35] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:04:56 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:05:01 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:05:01] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:07:33 _internal.py[line:87] INFO  * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+2017-07-07 15:07:36 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:07:36] "GET /people HTTP/1.1" 200 -
+2017-07-07 15:07:39 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:07:39] "GET / HTTP/1.1" 302 -
+2017-07-07 15:07:39 _internal.py[line:87] INFO 127.0.0.1 - - [07/Jul/2017 15:07:39] "GET /for_login HTTP/1.1" 200 -

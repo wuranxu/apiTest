@@ -4,6 +4,7 @@ __author__ = 'Woody'
 import inspect
 import json
 from initial import app
+from functools import wraps
 import os
 
 
@@ -41,7 +42,6 @@ class Operator(object):
                 pass
             rt.update({key: value})
         return rt
-
 
     @classmethod
     def transfer_case_info(self, case):

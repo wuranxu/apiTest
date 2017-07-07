@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e57a277-302c-464f-98dc-3486cbb1daf3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/excel_data/apiList.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2017-06-24 12-23-20.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel_data/api_config.xlsx" afterPath="$PROJECT_DIR$/excel_data/api_config.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/excelReader.py" afterPath="$PROJECT_DIR$/common/excelReader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/function.py" afterPath="$PROJECT_DIR$/common/function.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/time_handle.py" afterPath="$PROJECT_DIR$/common/time_handle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initial.py" afterPath="$PROJECT_DIR$/initial.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/ApiTest.log" afterPath="$PROJECT_DIR$/log/ApiTest.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bootstrap-3.3.7/js/tests/vendor/qunit.js" afterPath="$PROJECT_DIR$/static/bootstrap-3.3.7/js/tests/vendor/qunit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/testResult.html" afterPath="$PROJECT_DIR$/templates/testResult.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_method/caseOperator.py" afterPath="$PROJECT_DIR$/test_method/caseOperator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_method/runner.py" afterPath="$PROJECT_DIR$/test_method/runner.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +18,7 @@
     <SUITE FILE_PATH="coverage/ApiTest$sqlOrm.coverage" NAME="sqlOrm Coverage Results" MODIFIED="1498033541516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/method" />
     <SUITE FILE_PATH="coverage/ApiTest$mysql_db.coverage" NAME="mysql_db Coverage Results" MODIFIED="1498809566828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_operator" />
     <SUITE FILE_PATH="coverage/ApiTest$so_easy.coverage" NAME="so_easy Coverage Results" MODIFIED="1499399197607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop" />
-    <SUITE FILE_PATH="coverage/ApiTest$run.coverage" NAME="run Coverage Results" MODIFIED="1499407926078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ApiTest$run.coverage" NAME="run Coverage Results" MODIFIED="1499411435558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ApiTest$test.coverage" NAME="test Coverage Results" MODIFIED="1499052879730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ApiTest$ApiTest.coverage" NAME="ApiTest Coverage Results" MODIFIED="1498548568029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ApiTest$mongo_operator.coverage" NAME="mongo_operator Coverage Results" MODIFIED="1499234964498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_operator" />
@@ -52,10 +41,42 @@
       <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="269" column="35" lean-forward="true" selection-start-line="269" selection-start-column="35" selection-end-line="269" selection-end-column="35" />
+            <state relative-caret-position="1277">
+              <caret line="350" column="64" lean-forward="false" selection-start-line="350" selection-start-column="64" selection-end-line="350" selection-end-column="64" />
               <folding>
                 <element signature="e#30#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-207">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python34/Lib/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/function.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <element signature="e#37#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,44 +134,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/homework.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="56" column="44" lean-forward="false" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+            <state relative-caret-position="23">
+              <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_case.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/create_case.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/error.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="16" column="124" lean-forward="false" selection-start-line="16" selection-start-column="124" selection-end-line="16" selection-end-column="124" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_case.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/edit_case.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#12;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -169,7 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_case_</find>
       <find>get_case_l</find>
       <find>get_case_list</find>
       <find>dumps</find>
@@ -197,8 +185,9 @@
       <find>edit</find>
       <find>see_case</find>
       <find>myModal1</find>
-      <find>edit_case</find>
       <find>run</find>
+      <find>edit_case</find>
+      <find>for_login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -241,9 +230,7 @@
         <option value="$USER_HOME$/Desktop/so_easy.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/initial.py" />
-        <option value="$PROJECT_DIR$/common/function.py" />
         <option value="$PROJECT_DIR$/db_operator/mongo_operator.py" />
-        <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/templates/create_case.html" />
         <option value="$PROJECT_DIR$/templates/edit_case.html" />
         <option value="$PROJECT_DIR$/templates/homework.html" />
@@ -252,6 +239,8 @@
         <option value="$PROJECT_DIR$/templates/people.html" />
         <option value="$PROJECT_DIR$/templates/case_list.html" />
         <option value="$PROJECT_DIR$/static/scripts/common.js" />
+        <option value="$PROJECT_DIR$/common/function.py" />
+        <option value="$PROJECT_DIR$/run.py" />
       </list>
     </option>
   </component>
@@ -798,7 +787,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="350" />
+      <option name="time" value="351" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -807,24 +796,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python34/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="858" column="0" lean-forward="false" selection-start-line="858" selection-start-column="0" selection-end-line="858" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/excelReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="83" column="34" lean-forward="true" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-          <folding>
-            <element signature="e#60#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python34/Lib/site-packages/jinja2/parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1016,14 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python34/Lib/site-packages/werkzeug/routing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1092,14 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1230,10 +1185,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/function.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#37#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="269" column="35" lean-forward="true" selection-start-line="269" selection-start-column="35" selection-end-line="269" selection-end-column="35" />
+        <state relative-caret-position="1277">
+          <caret line="350" column="64" lean-forward="false" selection-start-line="350" selection-start-column="64" selection-end-line="350" selection-end-column="64" />
           <folding>
             <element signature="e#30#44#0" expanded="true" />
           </folding>

@@ -20,7 +20,17 @@ from flask import redirect
 from datetime import timedelta
 from db_operator.mongo_operator import MongoClient
 from flask import make_response
+from functools import wraps
 
+
+def login_required(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if session.get('user'):
+            return func(*args, **kwargs)
+        else:
+            return render_template("login.html")
+    return wrapper
 
 
 '''
@@ -43,22 +53,18 @@ def run_test(filename):
 
 
 @app.route('/', methods=['GET'])
+@login_required
 def index():
-    if session.get('user'):
-        return render_template('index.html', user=session.get('user'))
-    else:
-        return redirect(url_for('for_login'))
+    return render_template('index.html', user=session.get('user'))
 
 
 @app.route('/case')
+@login_required
 def case_view():
-    if session.get('user'):
-        db = MongoClient()
-        caseList = db.get_case_list()
-        del db
-        return render_template('case_list.html', posts=caseList, user=session.get('user'))
-    else:
-        return redirect(url_for('for_login'))
+    db = MongoClient()
+    caseList = db.get_case_list()
+    del db
+    return render_template('case_list.html', posts=caseList, user=session.get('user'))
 
 
 # 运行excel文件用例接口
@@ -93,6 +99,7 @@ def run_selected():
 
 # 查看报告接口
 @app.route('/report/<filename>')
+@login_required
 def showHtml(filename):
     return send_file(os.path.join(app.config['REPORT'], filename))
 
@@ -115,72 +122,65 @@ def delUser(mobile="18516600716"):
 
 
 @app.route('/case/new', methods=['POST'])
+@login_required
 def create_case():
-    if session.get('user'):
-        db = None
-        rt = {'code': 500, 'error': '', 'status': 0}
-        case_info = {}
-        try:
-            data = request.form
-            if data:
-                expect = data.get('expected')
-                case_name = str(data.get('case_name'))
-                params = data.get('params')
-                method = data.get('method')
-                _assert = data.get('assert')
-                url = data.get('url')
-                headers = data.get('headers')
-                content = data.get('content', '')
-                precondition = data.get("precondition")
-                sql_prepare = data.get('sql_prepare')
-                sql_verify = data.get('sql_verify')
-                sql_clean = data.get('sql_clean')
-                case_info.update(dict(
-                    expected=expect, enable=True,
-                    name=case_name, params=params,
-                    _assert=_assert, url=url,
-                    content=content, method=method,
-                    headers=headers, sql_clean=sql_clean,
-                    sql_verify=sql_verify, sql_prepare=sql_prepare,
-                    pre=precondition
-                ))
-                case_info = Operator.transfer_str(**case_info)
-                if expect and case_name and method and url and headers:
-                    if method.lower() == 'post':
-                        if not params:
-                            raise Exception('Please provide params for post method.')
-                    db = MongoClient()
-                    result = db.add_case(**case_info)
-                    if result:
-                        rt.update(dict(code=200, status=1, msg='Add a case Successfully.'))
-                else:
-                    raise Exception('Please check your params for case_info.')
-        except Exception as err:
-            logging.error('create_case error: {}'.format(str(err)))
-            rt.update(dict(error=str(err)))
-        finally:
-            if db:
-                del db
-        return jsonify(rt)
-    else:
-        return redirect(url_for('for_login'))
+    db = None
+    rt = {'code': 500, 'error': '', 'status': 0}
+    case_info = {}
+    try:
+        data = request.form
+        if data:
+            expect = data.get('expected')
+            case_name = str(data.get('case_name'))
+            params = data.get('params')
+            method = data.get('method')
+            _assert = data.get('assert')
+            url = data.get('url')
+            headers = data.get('headers')
+            content = data.get('content', '')
+            precondition = data.get("precondition")
+            sql_prepare = data.get('sql_prepare')
+            sql_verify = data.get('sql_verify')
+            sql_clean = data.get('sql_clean')
+            case_info.update(dict(
+                expected=expect, enable=True,
+                name=case_name, params=params,
+                _assert=_assert, url=url,
+                content=content, method=method,
+                headers=headers, sql_clean=sql_clean,
+                sql_verify=sql_verify, sql_prepare=sql_prepare,
+                pre=precondition
+            ))
+            case_info = Operator.transfer_str(**case_info)
+            if expect and case_name and method and url and headers:
+                if method.lower() == 'post':
+                    if not params:
+                        raise Exception('Please provide params for post method.')
+                db = MongoClient()
+                result = db.add_case(**case_info)
+                if result:
+                    rt.update(dict(code=200, status=1, msg='Add a case Successfully.'))
+            else:
+                raise Exception('Please check your params for case_info.')
+    except Exception as err:
+        logging.error('create_case error: {}'.format(str(err)))
+        rt.update(dict(error=str(err)))
+    finally:
+        if db:
+            del db
+    return jsonify(rt)
 
 
 @app.route('/create_case', methods=['GET'])
 def create_case_html():
-    if session.get('user'):
-        return render_template('create_case.html', user=session.get('user'))
-    else:
-        return url_for('login.html', info=None)
+    return render_template('create_case.html', user=session.get('user'))
+
 
 
 @app.route('/run_xlsx')
 def run_xlsx():
-    if session.get('user'):
-        file_list = Operator.getFileList()
-        return render_template('run_xlsx.html', fileList=file_list, user=session.get('user'))
-    else:
-        return redirect(url_for('for_login'))
+    file_list = Operator.getFileList()
+    return render_template('run_xlsx.html', fileList=file_list, user=session.get('user'))
 
 
 @app.route('/login', methods=('POST', ))
@@ -295,61 +295,60 @@ def edit_page(case_name):
 
 
 @app.route("/case/edit", methods=('POST', ))
+@login_required
 def edit_case():
-    if session.get('user'):
-        db = None
-        rt = {'code': 500, 'error': '', 'status': 0}
-        case_info = {}
-        try:
-            data = request.form
-            if data:
-                _id = data.get('_id')
-                expect = data.get('expected')
-                case_name = str(data.get('case_name'))
-                params = data.get('params')
-                method = data.get('method')
-                _assert = data.get('assert')
-                url = data.get('url')
-                headers = data.get('headers')
-                content = data.get('content', '')
-                precondition = data.get("precondition")
-                sql_prepare = data.get('sql_prepare')
-                sql_verify = data.get('sql_verify')
-                sql_clean = data.get('sql_clean')
-                case_info.update(dict(
-                    expected=expect, enable=True,
-                    name=case_name, params=params,
-                    _assert=_assert, url=url,
-                    content=content, method=method,
-                    headers=headers, sql_clean=sql_clean,
-                    sql_verify=sql_verify, sql_prepare=sql_prepare,
-                    pre=precondition
-                ))
-                case_info = Operator.transfer_str(**case_info)
-                if expect and case_name and method and url and headers:
-                    if method.lower() == 'post':
-                        if not params:
-                            raise Exception('Please provide params for post method.')
-                    db = MongoClient()
-                    result = db.edit_case(_id, case_info)
-                    if result.raw_result['ok']:
-                        rt.update(dict(code=200, status=1, msg='Add a case Successfully.'))
-                else:
-                    raise Exception('Please check your params for case_info.')
-        except Exception as err:
-            logging.error('create_case error: {}'.format(str(err)))
-            rt.update(dict(error=str(err)))
-        finally:
-            if db:
-                del db
-        return jsonify(rt)
-    else:
-        return redirect(url_for('for_login'))
+    db = None
+    rt = {'code': 500, 'error': '', 'status': 0}
+    case_info = {}
+    try:
+        data = request.form
+        if data:
+            _id = data.get('_id')
+            expect = data.get('expected')
+            case_name = str(data.get('case_name'))
+            params = data.get('params')
+            method = data.get('method')
+            _assert = data.get('assert')
+            url = data.get('url')
+            headers = data.get('headers')
+            content = data.get('content', '')
+            precondition = data.get("precondition")
+            sql_prepare = data.get('sql_prepare')
+            sql_verify = data.get('sql_verify')
+            sql_clean = data.get('sql_clean')
+            case_info.update(dict(
+                expected=expect, enable=True,
+                name=case_name, params=params,
+                _assert=_assert, url=url,
+                content=content, method=method,
+                headers=headers, sql_clean=sql_clean,
+                sql_verify=sql_verify, sql_prepare=sql_prepare,
+                pre=precondition
+            ))
+            case_info = Operator.transfer_str(**case_info)
+            if expect and case_name and method and url and headers:
+                if method.lower() == 'post':
+                    if not params:
+                        raise Exception('Please provide params for post method.')
+                db = MongoClient()
+                result = db.edit_case(_id, case_info)
+                if result.raw_result['ok']:
+                    rt.update(dict(code=200, status=1, msg='Add a case Successfully.'))
+            else:
+                raise Exception('Please check your params for case_info.')
+    except Exception as err:
+        logging.error('create_case error: {}'.format(str(err)))
+        rt.update(dict(error=str(err)))
+    finally:
+        if db:
+            del db
+    return jsonify(rt)
 
 
 @app.route('/people')
+@login_required
 def photos():
-    return render_template("people.html")
+    return render_template("people.html", user=session.get('user'))
 
 
 if __name__ == '__main__':
