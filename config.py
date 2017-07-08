@@ -39,29 +39,30 @@ class conf(dict):
     CONFIG_XLSX = 'api_config.xlsx'
 
     # mysql地址
-    HOST = "devapi2017.yitu8.cn"
+    HOST = "测试数据库地址"
 
     # mysql端口
     PORT = 3306
 
     # mysql用户名
-    MYSQL_USER = 'yitu8v3'
+    MYSQL_USER = '测试数据库用户名'
 
     # mysql密码
-    MYSQL_PWD = 'Yitu8@v3'
+    MYSQL_PWD = '测试数据库密码'
 
     # mysql 验证码表
-    MESSAGE_TABLE = 'yt8_sms_log'
+    MESSAGE_TABLE = '测试数据库短信验证码表不能告诉你哈'
 
     # USER表
-    USER_TABLE = 'yt8_user'
+    USER_TABLE = '测试数据库USER表不能告诉你哈'
 
     # 数据库名
-    DBNAME = 'yitu8v3'
+    DBNAME = '公司数据库名，不能告诉你哈'
 
     # tester账户
     TESTER = '18516600716'
 
+    # 本地mysql信息，CASE_TABLE可能没用
     LOCAL_HOST = 'localhost'
     LOCAL_PORT = '3306'
     LOCAL_USER = 'root'
@@ -71,7 +72,7 @@ class conf(dict):
     LOCAL_USER_TABLE = 'user'
     SECRET_KEY = 'xxx'
 
-    # mongo config
+    # 本地mongo config
     MONGO_HOST = '127.0.0.1'
     MONGO_PORT = 27017
     MONGO_USER = 'yitu8'

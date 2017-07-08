@@ -11,22 +11,6 @@ import json
 from flask_sqlalchemy import SQLAlchemy
 
 
-def getToken():
-    data = {
-        "actionTime": "2017-06-12 15:00:00",
-        "appId": 1009,
-        "requestData": {
-            "areaCode": 86,
-            "mobile": "18516600716",
-            "password": "wuranxu"
-        }
-    }
-    headers = {"Content-Type": "application/json"}
-    p = requests.post("http://devapi2017.yitu8.cn/client/user/userLogin", json=data, headers=headers)
-    data = json.loads(p.text)
-    return data.get('responseData').get('token')
-
-
 app = Flask(__name__)
 # 从config.py获取配置
 config_obj = conf()
